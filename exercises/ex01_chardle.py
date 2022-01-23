@@ -1,4 +1,5 @@
-"""EX01 - CHARDLE - A cute step toward Wordle."""
+"""EX01 - Chardle - A cute step toward Wordle."""
+
 __author__ = "730484344"
 
 five_word: str = input("Enter a 5-character word ")
@@ -8,7 +9,6 @@ if (len(five_word) != 5):
 one_letter: str = input("Enter a single character ") 
 if (len(one_letter) != 1):
     exit("Error: Character must be a single character")
-
 
 print("Searching for " + one_letter + " in " + five_word)
 count = 0 

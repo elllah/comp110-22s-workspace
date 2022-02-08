@@ -1,4 +1,4 @@
-"""One Shot Wordle"""
+"""One Shot Wordle."""
 __author__ = "730484344"
 
 SECRET: str = "python"
@@ -24,12 +24,12 @@ if guess != SECRET:
         else:
             yellow: bool = False
             c: int = 0
-            while (yellow == False and c < len(SECRET)):
+            while (yellow is not True and c < len(SECRET)):
                 if (index == SECRET[c]):
                     yellow = True
                 else:
                     c = c + 1
-            if (yellow == True):
+            if (yellow is not False):
                 print(result + YELLOW_BOX, end='')
             else:
                 print(result + WHITE_BOX, end='')
@@ -39,8 +39,8 @@ if guess != SECRET:
 
 else:
     while (i < len(SECRET)):
-        index: str = guess[i]
-        if (index == SECRET[i]):
+        index_green: str = guess[i]
+        if (index_green == SECRET[i]):
             print(result + GREEN_BOX, end='')
 
         i = i + 1
